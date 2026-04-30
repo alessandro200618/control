@@ -25,7 +25,7 @@ function CustomDrawerContent(props: any) {
         foto: "https://i.pravatar.cc/100"
     };
     return (
-        <View style={style.container}>
+        <View style={styles.container}>
             <DrawerContentScrollView {...props}>
                 <View style={styles.header}>
                 <Image
@@ -85,3 +85,45 @@ export default function DrawerRoutes() {
         </Drawer.Navigator>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    header: {
+        padding: 20,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#f5f5f5",
+        marginBottom: 10,
+    },
+    avatar: {
+        width: 80,
+        height: 80,
+        borderRadius: 40,
+        marginBottom: 10,
+    },
+    name: {
+        fontSize: 16,
+        fontWeight: "600",
+        color: "#333",
+    },
+    footer: {
+        padding: 20,
+        borderTopWidth: StyleSheet.hairlineWidth,
+        borderTopColor: "#ddd",
+    },
+    logouButton: {
+        flexDirection: "row",
+        alignItems: "center",
+        backgroundColor: "#1E88E5",
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        borderRadius: 6,
+    },
+    logoutText: {
+        color: "#fff",
+        marginLeft: 8,
+        fontWeight: "600",
+    },
+});
